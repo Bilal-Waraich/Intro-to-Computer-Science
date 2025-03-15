@@ -1,0 +1,4 @@
+dtob :: String -> Word
+dtob [] = 0
+dtob bin@('1':tail) = 2^((length bin) - 1) + dtob tail
+dtob ('0':tail) = dtob tail
